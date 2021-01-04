@@ -176,6 +176,259 @@ div.app div.header div.head_main div.head_main_m.container div.head_right_sever 
   color: #e1251b;
   font-weight: 600;
 }
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top {
+  height: 470px;
+  margin: 10px 0 20px;
+  background: lightblue;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top-nav {
+  width: 190px;
+  padding: 14px;
+  padding-right: 0;
+  float: left;
+  background: #999999;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top-nav ul.right_nav {
+  font-size: 14px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top-nav ul.right_nav li {
+  line-height: 24px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top-nav ul.right_nav li a {
+  color: #333333;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top-nav ul.right_nav li a:hover {
+  color: #c81623;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.bannerSlideshow {
+  position: relative;
+  width: 590px;
+  height: 470px;
+  margin: 0 10px;
+  float: left;
+  background: #ccc;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.bannerSlideshow div.slider-img ul {
+  position: relative;
+  width: 590px;
+  height: 470px;
+  overflow: hidden;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.bannerSlideshow div.slider-img ul li {
+  position: absolute;
+  width: 590px;
+  height: 470px;
+  float: left;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.bannerSlideshow div.slider-img ul li a img {
+  width: 590px;
+  height: 470px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.bannerSlideshow div.slider-ctrl span {
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  background: rgba(68, 68, 68, 0.6);
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.bannerSlideshow div.slider-ctrl span#prev.prev {
+  left: 0;
+  border-radius: 0 15px 15px 0;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.bannerSlideshow div.slider-ctrl span#next.next {
+  right: 0;
+  border-radius: 15px 0 0 15px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.bannerSlideshow ul.slider_point {
+  width: 170px;
+  height: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.bannerSlideshow ul.slider_point li {
+  width: 10px;
+  height: 10px;
+  background: red;
+  margin: 0 2px;
+  border-radius: 10px;
+  float: left;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right {
+  width: 190px;
+  float: left;
+  padding: 10px;
+  background: #ffffff;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login {
+  height: 102px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_top {
+  height: 40px;
+  font-size: 14px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_top img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  float: left;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_top div.index_login_top_r {
+  color: #666666;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_top div.index_login_top_r p {
+  margin-bottom: 2px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_bottom {
+  margin: 10px 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 14px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_bottom span {
+  display: inline-block;
+  width: 82px;
+  height: 25px;
+  padding: 2px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_bottom span:first-child {
+  background: #e1251b;
+  color: aliceblue;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_bottom span:last-child {
+  background: #363634;
+  color: #e5d790;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_bottom span:last-child:hover {
+  background: #e1251b;
+  color: aliceblue;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_main_news {
+  height: 112px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_main_news div.jdNews {
+  height: 20px;
+  line-height: 20px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_main_news div.jdNews span {
+  float: left;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_main_news div.jdNews b {
+  float: right;
+  font-size: 12px;
+  cursor: pointer;
+  color: #999999;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_main_news ul.newList {
+  height: 88px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_main_news ul.newList li {
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  cursor: pointer;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_main_news ul.newList li span {
+  margin-top: 4px;
+  height: 16px;
+  width: 35px;
+  text-align: center;
+  line-height: 16px;
+  margin-right: 6px;
+  background: rgba(225, 37, 27, 0.08);
+  display: block;
+  float: left;
+  margin-right: 4px;
+  color: #e1251b;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_main_news ul.newList li b {
+  width: 130px;
+  height: 22px;
+  line-height: 22px;
+  display: block;
+  float: left;
+  color: #666666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness {
+  height: 238px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul {
+  height: 240px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li i {
+  font-size: 28px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li b {
+  font-size: 12px;
+  color: #333333;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(1),
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(8),
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(11) i {
+  color: #5aaae5;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(2),
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(4),
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(12) i {
+  color: #f2a234;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(3),
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(5),
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(7) i {
+  color: #40d7c7;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(6),
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(9),
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.otherBusiness ul li:nth-child(10) i {
+  color: #eb675e;
+}
+div.app div.main div.main-top div.brandOptimization div.seckill {
+  height: 260px;
+  background: lightpink;
+}
+div.app div.main div.main-top div.brandOptimization div.specialOffer {
+  height: 305px;
+  background: lightgreen;
+}
+div.app div.main div.main-top div.brandOptimization div.findGood {
+  height: 260px;
+  background: lightblue;
+}
+div.app div.main div.main-top div.brandOptimization div.newProduct {
+  height: 305px;
+  background: red;
+}
+div.app div.main div.main-top div.channelSquare {
+  height: 845px;
+  background: pink;
+}
 div.app div.footer div.foot_top.container {
   height: 104px;
   line-height: 104px;

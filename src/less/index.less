@@ -242,7 +242,304 @@ div.app {
     
     // 主体
     div.main {
-     
+      div.main-top {
+        div.brandOptimization {
+          div.brandOptimization_top {
+            height: 470px;
+            margin: 10px 0 20px;
+            background: lightblue;
+            div.brandOptimization_top-nav {
+              width: 190px;
+              padding: 14px;
+              padding-right: 0;
+              float: left;
+              background: #999999;
+              ul.right_nav {
+                font-size: 14px;
+                li {
+                  line-height: 24px;
+                  a {
+                    color: rgb(51,51,51);
+                  }
+                  a:hover{
+                    color: rgb(200,22,35);
+                  }
+                }
+              }
+            }
+      
+            div.bannerSlideshow {
+              position: relative;
+              width: 590px;
+              height: 470px;
+              margin: 0 10px;
+              float: left;
+              background: #ccc;
+              div.slider-img {
+                ul {
+                  position: relative;
+                  width: 590px;
+                  height: 470px;
+                  overflow: hidden;
+                  li {
+                    position: absolute;
+                    width: 590px;
+                    height: 470px;
+                    float: left;
+                    a {
+                      img {
+                        width: 590px;
+                        height: 470px;
+                      }
+                    }
+                  }
+                }
+              }
+      
+              div.slider-ctrl {
+                span{
+                  width: 20px;
+                  height: 30px;
+                  position: absolute;
+                  top: 50%;
+                  margin-top: -10px;
+                  background: rgba(68,68,68,0.6);
+                  font-size: 18px;
+                  text-align: center;
+                  line-height: 30px;
+                  cursor: pointer;
+                }
+                span#prev.prev {
+                  left: 0;
+                  border-radius: 0 15px 15px 0;
+                }
+      
+                span#next.next {
+                  right: 0;
+                  border-radius: 15px 0 0 15px;
+
+                }
+              }
+              ul.slider_point{
+                width: 170px;
+                height: 20px;
+                position: absolute;
+                bottom: 20px;
+                left: 50px;
+                li{
+                width: 10px;
+                height: 10px;
+                background: red;
+                margin: 0 2px;
+                border-radius: 10px;
+                float: left;
+                }
+                
+              }
+            }
+      
+            div.brandOptimization_top_right {
+              width: 190px;
+              float: left;
+              padding: 10px;
+              background: rgb(255,255,255);
+              div.right_top_login {
+                height: 102px;
+                div.index_login_top {
+                  height: 40px;
+                  font-size: 14px;
+                  img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    float: left;
+                  }
+      
+                  div.index_login_top_r {
+                    // float: right;
+                    color: rgb(102,102,102);
+                    p {
+                      margin-bottom: 2px;
+                    }
+      
+                    div {
+                      span {
+      
+                      }
+                    }
+                  }
+                }
+      
+                div.index_login_bottom {
+                  margin: 10px 0;
+                  border-bottom: 1px solid #ccc;
+                  padding-bottom: 14px;
+                  span {
+                    display: inline-block;
+                    width: 82px;
+                    height: 25px;
+                    padding: 2px;
+                    border-radius: 12px;
+                    font-size: 14px;
+                    line-height: 22px;
+                    text-align: center;
+                    cursor: pointer;
+                  }
+                  span:first-child{
+                    background: rgb(225,37,27);
+                    color: aliceblue;
+                  }
+                  span:last-child{
+                    background: rgb(54,54,52);
+                    color: rgb(229,215,144);
+                  }
+                  span:last-child:hover{
+                    background: rgb(225,37,27);
+                    color: aliceblue;
+                  }
+                }
+              }
+      
+              div.right_main_news {
+                height: 112px;
+
+                div.jdNews {
+                  height: 20px;
+                  line-height: 20px;
+                  span {
+                    float: left;
+                    margin-right: 20px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: rgb(51,51,51);
+                  }
+      
+                  b {
+                    float: right;
+                    font-size: 12px;
+                    cursor: pointer;
+                    color: rgb(153,153,153);
+                  }
+                }
+      
+                ul.newList {
+                  height: 88px;
+                  li {
+                    height: 22px;
+                    line-height: 22px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    span {
+                      margin-top: 4px;
+                      height: 16px;
+                      width: 35px;
+                      text-align: center;
+                      line-height: 16px;
+                      margin-right: 6px;
+                      background: rgba(225,37,27,.08);
+                      display: block;
+                      float: left;
+                      margin-right: 4px;
+                      color: rgb(225,37,27);
+                    }
+      
+                    b {
+                      width: 130px;
+                      height: 22px;
+                      line-height: 22px;
+                      display: block;
+                      float: left;
+                      color: rgb(102,102,102);
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                    }
+                  }
+                }
+              }
+      
+              div.otherBusiness {
+                height: 238px;
+                ul {
+                  height: 240px;
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  grid-template-rows: 1fr 1fr 1fr 1fr;
+                  li {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content:center;
+                    flex-direction:column;
+                    align-items:center;
+                    i{
+                      font-size: 28px;
+                    }
+                    b{
+                      font-size: 12px;
+                      color: rgb(51,51,51);
+                    }
+                  }
+                  li:nth-child(1),li:nth-child(8),li:nth-child(11) i{
+                    color: rgb(90,170,229);
+                  }
+                  li:nth-child(2),li:nth-child(4),li:nth-child(12) i{
+                    color: rgb(242,162,52);
+                  }
+                  li:nth-child(3),li:nth-child(5),li:nth-child(7) i{
+                    color: rgb(64,215,199);
+                  }
+                  li:nth-child(6),li:nth-child(9),li:nth-child(10) i{
+                    color: rgb(235,103,94);
+                  }
+                }
+              }
+            }
+          }
+      
+          div.seckill {
+            height: 260px;
+            background: lightpink;
+          }      
+          div.specialOffer {
+            height: 305px;
+            background: lightgreen;
+          }
+      
+          div.findGood {
+            height: 260px;
+            background: lightblue;
+          }
+      
+          div.newProduct{
+            height: 305px;
+            background: red;
+          }
+        }
+      
+        div.channelSquare {
+          height: 845px;
+          background: pink;
+        }
+      }
+      
+      div.main_list {
+        h2 {
+      
+        }
+      
+        ul.main_list_top {
+          li {
+      
+          }
+        }
+      
+        div.main_list_goods {
+          div {
+      
+          }
+        }
+      }
     }
 
     // 底部
