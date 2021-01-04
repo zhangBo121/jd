@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Document</title><link rel=stylesheet href=../css/reset.css></head><style>*{padding:0;margin:0}.wrap{width:300px;height:500px;border:#add8e6 1px solid}.head{height:30px;width:300px;display:flex;border-bottom:1px solid #000}.head h3{flex:1;text-align:center;height:30px;line-height:30px;border-right:#00ff7f 1px solid;cursor:pointer}.main{height:470px;width:300px}.main div{height:470px;width:300px;display:none}.main div:nth-child(1){background:red}.main div:nth-child(2){background:#00f}.main div:nth-child(3){background:green}.main div:nth-child(4){background:#ff0}div.show{display:block}.active{background:pink}</style><body><div class=wrap><div class=head><h3 class=active>省</h3><h3>市</h3><h3>县</h3><h3>乡</h3></div><div class=main><div class=show>1</div><div>2</div><div>3</div><div>4</div></div></div></body><script src=../../public.js></script><script src=../../week6/jquery-1.8.3/jquery-1.8.3.js></script><script>// var h3s = document.querySelectorAll('.head h3')
+// var divs = document.querySelectorAll('.main div')
+// var prevIndex = 0
+// for(var i = 0 ; i < h3s.length;i++){
+//     h3s[i].index = i
+//     h3s[i].onclick = function(){
+//         // 取消所有类名
+//         divs[prevIndex].className = ''
+//         h3s[prevIndex].className = ''
+//         // 添加类名
+//         divs[this.index].className = 'show'
+//         h3s[this.index].className = 'active'
+//         // 更新下标
+//         prevIndex = this.index
+//     }
+// }
+ 
+
+
+(function(){
+    var index = 0
+    $('.head h3').click(function(){
+        index = $(this).index()
+        console.log(index);
+        gteData(index+1)
+        
+        // console.log(index);
+        // console.log($(this).parent().siblings().children().eq(index));
+        $(this).addClass('active').siblings().removeClass('active').parent().siblings().children().eq(index).addClass('show').siblings().removeClass('show')
+        // console.log(index);
+    })
+    async function gteData(index){
+        var data = await $.ajax({
+            url:'http://area.ylapi.cn/ad_area/division_lv.u',
+            type:'post',
+            data:{
+                'uid':11464,
+                'appkey':'a30c9daa78febd9a6a61ff617cb7b432',
+                'level':index
+            },
+        })
+        console.log(data);
+    }
+    gteData(index+1)
+})()</script></html>
