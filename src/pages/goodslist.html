@@ -1,14 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/iconfont.css">
-    <link rel="stylesheet" href="../css/detail.css">
+    <title>商品列表</title>
 </head>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/iconfont.css">
+<link rel="stylesheet" href="../css/goodslist.css">
+<style>
+
+a{
+    text-decoration: none;
+    color:rgb(128,127,126);
+}
+/* .container{
+    width: 1040px;
+    margin: 0 auto;
+} */
+/* .wrap{
+    border: palegreen 1px solid;
+    overflow: hidden;
+    position: relative;
+} */
+/* .list li{
+    width: 218px;
+    height: 432px;
+    border: solid #fff 1px;
+    padding: 20px 10px;
+    margin: 10px;
+    float: left;
+} */
+/* .list li:hover{
+    border: solid #ccc 1px;
+} */
+/* .list li p:nth-child(1){
+    width: 220px;
+    margin-bottom: 10px;
+}
+.list li p:nth-child(2){
+    width: 220px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 20px;
+    color: rgb(228,64,62);
+    margin-bottom: 8px;
+} */
+/* .list li p:nth-child(3){
+    width: 220px;
+    font-size: 14px;
+    color: rgb(128,127,126);
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list li p:nth-child(3) a:hover{
+    color: rgb(243,2,19);
+}
+.list li p:nth-child(4){
+    color: rgb(255,170,113);
+    width: 220px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 8px;
+}
+.list li p:nth-child(5){
+    width: 220px;
+    text-align: left;
+    font-size: 14px;
+    color: rgb(100,112,177);
+    margin-bottom: 10px;
+}
+.list li p:nth-child(5) span{
+color: rgb(173,171,172);
+}
+.list li p:nth-child(6){
+color: rgb(173,171,172);
+text-align: left;
+margin-bottom: 10px;
+}
+.list li p:nth-child(7){
+    width: 30px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    padding: 4px;
+    background: rgb(226,58,58);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.list li p:nth-child(8){
+    width: 220px;
+    height: 30px;
+}
+.list li p:nth-child(8) span{
+    width: 98px;
+    height: 28px;
+    border: 1px solid #ccc;
+    float: right;
+    cursor: pointer;
+}
+.list li p:nth-child(8) span:hover{
+    border: 1px solid rgb(228,57,60);
+}
+.list li p:nth-child(8) em a{
+    width: 98px;
+    height: 28px;
+    border: 1px solid #ccc;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 600;
+    color: rgb(228,57,60);
+}
+.list li p:nth-child(8) em:hover a{
+    border: 1px solid rgb(228,57,60);
+}
+.list li p:nth-child(8) span i{
+    /* border-right:1px solid #ccc ; */
+    /* width: 28px;
+    height: 28px;
+    display:inline-block;
+    text-align: center;
+    line-height: 28px;
+    color: rgb(228,57,60);
+} */
+/*.list li p:nth-child(8) span b{
+    text-align: center;
+    font-size: 13px;
+    color: rgb(228,57,60);
+}
+.todoCart{
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    color: rgb(224, 49, 78);
+
+    text-align: center;
+    line-height: 40px;
+    border: rgb(255,170,113) 1px solid;
+    position: fixed;
+    right: 0;
+    top: 300px;
+    cursor: pointer;
+    background: rgba(32, 202, 202, 0.8);
+} */
+
+
+
+</style>
 <body>
     <div class="app">
         <!-- 网站头部 -->
@@ -79,121 +224,21 @@
         </div>
 
         <!-- 网站主体 -->
-        <div class="main">
-            <div class="main_head">
-                <p class="container">店铺名称</p>
-            </div>
-            <div class="productCheck container">
-                <div class="productCheck_left">
-                    <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                    <div class="mask"></div>
-                    <div class="maxImgbox">
-                        <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                    </div>
-                    <ul class="minImg">
-                        <li><p> &lt; </p></li>
-                        <div class="minImgbox">
-                        <li class="minImgbox_show"><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        </div>
-                        <li><p> &gt; </p></li>
-                    </ul>
-                </div>
-                <div class="productCheck_right">
-                    <p>标题</p>
-                    <div class="productPrice">
-                        <div class="productPrice_left">
-                            <p>京东价</p>
-                        </div>
-                        <div class="productPrice_center">
-                            <p><span>￥</span><b>2888</b><i>降价通知</i></p>
-                            <p><span>￥</span><b>1888</b><i>PLUS</i><em>PLUS会员专享价</em><strong>现在开通PLUS会员享限时优惠 >></strong></p>
-                        </div>
-                        <div class="productPrice_right">
-                            <p>累计评价</p>
-                            <span>2999+</span>
-                        </div>
-                    </div>
-                    <div class="dispatching">
-                        <div class="dispatching_head">
-                            <div class="dispatching_head_left">
-                                <p>配送至</p>
-                            </div>
-                            <div class="dispatching_head_right">
-                                <p><span>江西省南昌市湾里区xxx号</span><b>有货</b></p>
-                                <ul class="support">
-                                    <li>支持</li>
-                                    <li>可配送海外</li>
-                                    <li>闪电退款</li>
-                                    <li>随心换</li>
-                                    <li>99元免基础运费</li>
-                                </ul>    
-                                <ul class="delivery"> 
-                                    <li><img src="//img10.360buyimg.com/imagetools/jfs/t1/136750/17/12251/5189/5f8586e6E483b2f57/78ee33bdc7ef8c35.png" alt=""></li>
-                                    <li>次日达</li>
-                                    <li>预约送货</li>
-                                    <li>送货上门</li>
-                                </ul>
-                                <p>由 京东 发货, 并提供售后服务. 23:00前下单，预计明天(01月06日)送达</p>
-                            </div>
-                        </div>
-                        <div class="dispatching_foot">
-                            <span>重量</span>
-                            <b>3.0 kg</b>
-                        </div>
-                    </div>
-                    <div class="productNum">
-                        <div class="productNum_left">
-                            <input type="text" class="PNum">
-                            <p><span>+</span><b>-</b></p>
-                        </div>
-                        <div class="productNum_right">
-                            <span>加入购物车</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 详情 -->
-            <div class="productDetail">
-                <ul class="productDetail_head">
-                    <li>
-                        <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                        <p><span>￥</span><b>9999</b></p>
-                    </li>
-                </ul>
-                <div class="productDetail_main container">
-                    <div class="productDetail_main_title">
-                        <h3>商品介绍</h3>
-                        <h3>规格与包装</h3>
-                        <h3>售后保障</h3>
-                        <h3>商品评价</h3>
-                        <h3>本店好评</h3>
-                    </div>
-                    <ul>
-                        <li>
-                            <h3>详情1</h3>
-                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                            <h3>详情1</h3>
-                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                            <h3>详情1</h3>
-                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                            <h3>详情1</h3>
-                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                        </li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="wrap container01">
+            <ul class="list">
+                <!-- <li>
+                    <p><a href="#"><img src="//img12.360buyimg.com/n7/jfs/t1/133065/20/18525/77794/5fc9b07eE55b8d696/eba4ff1aa86a8a3f.jpg" alt=""></a></p>
+                    <p><i>￥ </i><b>88888</b></p>
+                    <p><a href="#">描述实地阿红的覅u爱仕达覅偶爱仕达覅偶按税法世纪东方hi按实际华发商都</a></p>
+                    <p>【京品】</p>
+                    <p><b>评价</b><span>条评价</span></p>
+                    <p><a href="#">店铺名</a></p>
+                    <p>自营</p>
+                    <p><em><a>查看详情</a></em><span><i class="iconfont icon-gouwuche"></i><b>加入购物车</b></span></p>
+                </li> -->
+            </ul>
+            <div class="todoCart">查看购物车</div>
         </div>
-
         <!-- 网站底部 -->
         <div class="footer">
             <div class="foot_top container">
@@ -322,8 +367,7 @@
             </div>
         </div>
     </div>
-    <div id="aa"></div>
 </body>
 <script src="../js/public.js"></script>
-<script src="../js/detail.js"></script>
+<script src="../js/goodslist.js"></script>
 </html>

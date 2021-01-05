@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+</head>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.container{
+    width: 990px;
+    margin: 0 auto;
+}
+.back{
+    cursor: pointer;
+}
+.header{
+    width: 100%;
+    height: 30px;
+    background: #ccc;
+    line-height: 30px;
+}
+.head_left{
+    margin-left: 10px;
+    float: left;
+}
+.box1{
+    margin-left: 250px;
+}
+.box2{
+    margin-left: 300px;
+}
+.box3{
+    margin-left: 90px;
+}
+.box4{
+    margin-left: 90px;
+}
+.box5{
+    margin-left: 60px;
+}
+.mainfoot{
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    background: #ccc;
+    line-height: 40px;
+}
+.mainfoot_left{
+    float: left;
+    margin-left: 10px;
+}
+.mainfoot_center{
+    float: left;
+    margin-left: 20px;
+}
+.mainfoot_center span{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.mainfoot_center b{
+    cursor: pointer;
+}
+.maft_r{
+    float: right;
+}
+.total{
+    font-size: 16px;
+    color: rgb(230,67,71);
+    font-weight: 700;
+    margin-left: 20px;
+}
+.total i{
+    color: rgb(54, 49, 49);
+    font-size: 14px;
+}
+.account{
+    width: 80px;
+    height: 39px;
+    margin-left: 20px;
+    font-size: 14px;
+    display: inline-block;
+    background: rgb(230,67,71);
+    text-align: center;
+    cursor: pointer;
+}
+.maft_r span:nth-child(1){
+    font-size: 14px;
+}
+.maft_r span:nth-child(1) i{
+    margin: 0 6px;
+    font-size: 16px;
+    color: rgb(230,67,71);
+    font-weight: 700;
+}
+
+/* 商品样式 */
+.list li{
+    margin:10px 0;
+}
+.listHeader{
+    border-bottom: 2px solid #999999;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.listHeader_left{
+    margin: 0 10px;
+}
+.listFooter{
+    display: flex;
+    background: rgb(255,244,232);
+    height: 120px;
+    padding: 20px 30px 0 10px;
+}
+.odd{
+    margin-right: 10px;
+}
+.listFooter img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.listFooter>span{
+    width: 300px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.unitPrice{
+    margin-left: 120px;
+    width: 70px;
+    text-align: center;
+    display: inline-block;
+}
+.num01{
+    margin-left: 40px;
+}
+.num01 b,.num01 i{
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+.num01 span{
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+
+}
+.subtotal{
+    margin-left: 53px;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+}
+.del{
+    margin-left: 40px;
+    cursor: pointer;
+}
+</style>
+<body>
+    <h1>购物车</h1>
+    <h2 class="back">返回商品列表</h2>
+    <hr>
+    <div class="wrap container">
+        <div class="header">
+
+            <s class="box1">商品</s>
+            <b class="box2">单价</b>
+            <i class="box3">数量</i>
+            <em class="box4">小计</em>
+            <strong class="box5">操作</strong>
+        </div>
+        <div class="main">
+            <ul class="list">
+                <!-- 商品 -->
+                <!-- <li>
+                    <div class="listHeader">
+                        <input type="checkbox" class="listHeader_left">
+                        <span>京东自营</span>
+                    </div>
+                    <div class="listFooter">
+                        <input type="checkbox" class="odd">
+                        <img src="https:\/\/img12.360buyimg.com\/n7\/jfs\/t1\/133065\/20\/18525\/77794\/5fc9b07eE55b8d696\/eba4ff1aa86a8a3f.jpg" alt="">
+                        <span>哈斯卡机会大都爱说到死得好死的哈搜ID哈收到货哈卡仕达his的哈</span>
+                        <p class="unitPrice"><b>￥</b><i>2323</i></p>
+                        <div class="num01"><b> - </b><span>3</span><i> + </i></div>
+                        <p class="subtotal"><b>￥</b><i>888</i></p>
+                        <em class="del">删除</em>
+                    </div>
+                </li> -->
+            </ul>
+            <div class="mainfoot">
+                <div class="mainfoot_left">
+                    <input type="checkbox" class="all">
+                    <span>全选</span>
+                </div>
+                <div class="mainfoot_center">
+                    <span class="dels">删除选中的商品</span>
+                </div>
+                <div class="maft_r">
+                    <span>已选择<i>0</i>件商品</span>
+                    <span class="total"><i>总价：</i><em>￥ </em><b>0</b></span>
+                    <span class="account">去结算</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/public.js"></script>
+<script src="../js/cart.js"></script>
+</html>

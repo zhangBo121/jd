@@ -58,34 +58,17 @@ div.app {
                 border: none;
               }
             }
-
-            b {}
           }
-
-          li.myOrder {}
 
           li.myjd {
             i.iconfont.icon-xia {
               font-size: 12px;
             }
           }
-
-          li.member {}
-
           li.company {
             a {
               color: rgb(226, 35, 26);
-
-              i.iconfont.icon-xia {}
             }
-          }
-
-          li.serve {
-            i.iconfont.icon-xia {}
-          }
-
-          li.siteMap {
-            i.iconfont.icon-xia {}
           }
 
           li.phonejd {
@@ -109,10 +92,6 @@ div.app {
           overflow: hidden;
           float: left;
           margin-top: 10px;
-
-          a {
-            img {}
-          }
         }
 
         // 搜索部分
@@ -190,13 +169,10 @@ div.app {
                   text-align: center;
                   line-height: 16px;
                 }
-
                 i {
                   margin: 0 10px;
                 }
-
               }
-
               div.cart:hover {
                 border: rgb(241, 2, 21) 1px solid;
               }
@@ -344,7 +320,6 @@ div.app {
               span#next.next {
                 right: 0;
                 border-radius: 15px 0 0 15px;
-
               }
             }
 
@@ -392,16 +367,12 @@ div.app {
                 }
 
                 div.index_login_top_r {
-                  // float: right;
                   color: rgb(102, 102, 102);
 
                   p {
                     margin-bottom: 2px;
                   }
 
-                  div {
-                    span {}
-                  }
                 }
               }
 
@@ -644,10 +615,6 @@ div.app {
                       height: 24px;
                       float: left;
                       background: rgb(225, 37, 27);
-
-                      i {}
-
-                      b {}
                     }
 
                     s {
@@ -655,10 +622,6 @@ div.app {
                       height: 24px;
                       float: right;
                       background: rgb(253, 250, 250);
-
-                      i {}
-
-                      b {}
                     }
                   }
                 }
@@ -728,8 +691,6 @@ div.app {
                 p {
                   margin-right: 10px;
                 }
-
-                i {}
               }
 
               div.title_right {
@@ -987,27 +948,145 @@ div.app {
           }
         }
 
-        div.newProduct {
-          height: 305px;
-          background: red;
-        }
       }
 
       div.channelSquare {
-        height: 845px;
+        height: 895px;
+        width: 990px;
         background: pink;
+
+        h3{
+          font-size: 30px;
+          line-height: 30px;
+          font-weight: 600;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        div.channelSquare_img{
+          height: 845px;
+          display: grid;
+          grid-gap: 8px;
+  
+          // 不会报错
+          // grid-template-columns: 1fr 1fr 1fr 1fr;
+          // grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+          
+          // 会报错
+          grid-template:
+          "a1 a2 a3 a4" 1fr
+          "a1 a2 a7 a8" 1fr
+          "a9 a10 a11 a12" 1fr
+          "a13 a14 a15 a16" 1fr
+          "a17 a18 a19 a20" 1fr
+          / 1fr 1fr 1fr 1fr
+          ;
+
+        }
+        // img{
+
+        // }
       }
     }
 
     div.main_list {
-      h2 {}
-
-      ul.main_list_top {
-        li {}
+      overflow: hidden;
+      h2 {
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 600;
+        text-align: center;
+        margin:10px 0 20px;
       }
 
-      div.main_list_goods {
-        div {}
+      ul.main_list_top {
+        height: 60px;
+        line-height: 60px;
+        display: flex;
+        text-align: center;
+        background: rgb(255,255,255);
+        margin-bottom: 10px;
+        li {
+          flex: 1;
+          cursor: pointer;
+        }
+        li.active01{
+          background: rgb(225, 37, 27);
+        }
+      }
+
+      ul.main_list_goods {
+        min-height: 500px;
+        background: lightpink;
+        float: left;
+        margin-bottom: 20px;
+        li {
+          display: none;
+          width: 100%;
+          height: 100%;
+        }
+        li:nth-child(1){
+          width: 1000px;
+          height: 100%;
+          float: left;
+          background: rgb(244,244,244);
+          div.main_list_gs{
+            width: 190px;
+            height: 266px;
+            padding: 20px 10px;
+            overflow: hidden;
+            float: left;
+            margin:0 10px 10px 0;
+            background: rgb(255,255,255);
+            cursor: pointer;
+            img{
+              width: 120px;
+              height: 120px;
+              margin: 10px 25px 20px;
+            }
+            p{
+              font-size: 14px;
+              color: #999999;
+              margin-bottom: 10px;
+              overflow : hidden;/*必须结合的属性,当内容溢出元素框时发生的事情*/
+              text-overflow: ellipsis;/*可以用来多行文本的情况下，用省略号“…”隐藏超出范围的文本 。*/
+              display: -webkit-box;/*必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。*/
+              -webkit-line-clamp: 2;/*用来限制在一个块元素显示的文本的行数。*/
+              -webkit-box-orient: vertical;/*必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。*/
+            }
+            span{
+              color: rgb(225, 37, 27);
+              font-weight: 700;
+ 
+            }
+          }
+        }
+        li:nth-child(2){
+          width: 1000px;
+          height: 100%;
+          background: lightblue;
+        }
+        li:nth-child(3){
+          width: 1000px;
+          height: 100%;
+          background: lightgreen;
+        }
+        li:nth-child(4){
+          width: 1000px;
+          height: 100%;
+          background: lightpink;
+        }
+        li:nth-child(5){
+          width: 1000px;
+          height: 100%;
+          background: lightyellow;
+        }
+        li:nth-child(6){
+          width: 1000px;
+          height: 100%;
+        }
+        li.show{
+          display: block;
+        }
       }
     }
   }

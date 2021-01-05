@@ -106,3 +106,83 @@ function light(){
     liArr[index].className = 'slider-ctrl-con light'
 }
 }
+
+
+// 为你推荐选项卡
+var lis = document.querySelectorAll('.main_list_top li')  //所有的标题
+var divs = document.querySelectorAll('.main_list_goods li')  //所有的内容
+tabContral(lis,divs)
+function tabContral(lis,divs){
+    var lis = lis
+    var divs = divs
+    var prevIndex = 0
+    for(var i = 0 ; i<lis.length;i++){
+        lis[i].index = i
+        lis[i].onclick = function(){
+            lis[prevIndex].className = ''
+            divs[prevIndex].className = ''
+            lis[this.index].className = 'active01'
+            divs[this.index].className = 'show'
+            prevIndex = this.index
+        }
+    }
+}
+
+// 猜你喜欢数据请求
+ajax({
+    url:'../data/guesslikegoods.json',
+    type:'get',
+    data:'',
+    cache:true,
+    dataType:'json',
+    success:function(data){
+        console.log(data);
+        rendererPage(data)
+    }
+})
+
+// 渲染页面
+function rendererPage(data){
+    var li01 = document.querySelector('.main_list_goods li:nth-child(1)')
+    var arr = []  //放图片地址
+    data.forEach((item)=>{
+        var div = document.createElement('div')
+        div.className = 'main_list_gs'
+        div.innerHTML = `
+        <img data-src="${item['图片地址']}" alt="">
+        <p>${item['商品名称']}</p>
+        <span><i>￥</i>${item['价格']}</span>
+        `
+        li01.appendChild(div)
+        // arr.push(item['图片地址'])
+    })
+    // 所有商品的集合
+    var products = li01.children
+
+    // 遍历所有商品，取出图片添加到arr
+    for(var i =0 ; i < products.length ; i++){
+        arr.push(products[i].children[0])
+    }
+
+    loadImg()
+    function loadImg() {
+        // 页面滚动条所在高度
+        var scrollT = document.body.scrollTop || document.documentElement.scrollTop
+            // console.log(scrollT);
+            // 可视区高度
+        var windowH = document.documentElement.clientHeight
+            // console.log(windowH);
+            // 遍历所有的商品
+        for (var i = 0, len = arr.length; i < len; i++) {
+            // 判断当前商品到最外层已定位父级 <= 滚动条的高度+窗口的高度
+            if (offset(arr[i]).top <= scrollT + windowH) {
+                // 当前图片进入可视区范围，给当前图片设置src
+                arr[i].src = arr[i].getAttribute('data-src')
+            }
+        }
+    }
+    // 监听滚动条事件
+    window.onscroll = function() {
+        loadImg()
+    }
+}

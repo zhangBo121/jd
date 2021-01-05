@@ -66,6 +66,10 @@ div.wrap {
                 font-weight: 600;
                 line-height: 54px;
             }
+            h3.active{
+                color: #e93854;
+                background: lightblue;
+            }
             h3:hover{
                 color: #e93854;
             }
@@ -73,61 +77,61 @@ div.wrap {
   
           div.min_box {
             //   扫码登录
-              .QR_box{
-                display: none;
-
-                  div.sCode {
-                      height: 180px;
-                      width: 330px;
-                      border: lightblue 1px solid;
-                      position: relative;
-                      .code{
-                          position: absolute;
-                          left: 100px;
-                          top: 16px;
-                          z-index: 10;
-                      }
-                      .code_phone{
-                          position: absolute;
-                          right: 0;
-                          top: 2px;
-                          z-index: 4;
-                          // display: none;
-                      }
-                  }
-                  .b_sCode{
-                      p{
-                          margin-top: 10px;
-                          color: rgb(153,153,153);
-                          a{
-                              color: rgb(228, 63, 63);
-
-                          }
-                      }
-                      .ico_bot {
-                          height: 30px;
-                          line-height: 30px;
-                          margin-top: 10px;
-                        margin-left: 50px;
-                        margin-bottom: 10px;
-                        font-size: 14px;
-                        color: rgb(153,153,153);
-                          span{
-                            margin-right: 20px;
-                            line-height: 30px;
-                            i{
-                                font-size: 20px;
-                                margin-right: 8px;
-                                margin-top: 2px;
-                            }
-                        }
-                      }
+            div.QR_box{
+            display: none;
+                div.sCode {
+                    height: 180px;
+                    width: 330px;
+                    position: relative;
+                    .code{
+                        position: absolute;
+                        left: 100px;
+                        top: 16px;
+                        z-index: 10;
+                    }
+                    .code_phone{
+                        position: absolute;
+                        right: 0;
+                        top: 2px;
+                        z-index: 4;
+                        // display: none;
+                        opacity: 0;
                     }
                 }
+                .b_sCode{
+                    p{
+                        margin-top: 10px;
+                        color: rgb(153,153,153);
+                        a{
+                            color: rgb(228, 63, 63);
+
+                        }
+                    }
+                    .ico_bot {
+                        height: 30px;
+                        line-height: 30px;
+                        margin-top: 10px;
+                    margin-left: 50px;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    color: rgb(153,153,153);
+                        span{
+                        margin-right: 20px;
+                        line-height: 30px;
+                        i{
+                            font-size: 20px;
+                            margin-right: 8px;
+                            margin-top: 2px;
+                        }
+                    }
+                    }
+                }
+            }
 
             //   账户登录
-            .user_box{
-                display: block;
+            div.user_box{
+                display: none;
+                // display: block;
                 div.login {
                     width: 330px;
                     height: 190px;
@@ -171,6 +175,9 @@ div.wrap {
                         }
                     }
                 }
+            }
+            div.show{
+                display: block;
             }
             .btm_b{
                 margin-bottom: 34px;
@@ -267,9 +274,4 @@ div.wrap {
       width: 990px;
       margin: 0 auto;
   }
-  .show{
-      display: block;
-  }
-  .active{
-      color: #e93854;
-  }
+
