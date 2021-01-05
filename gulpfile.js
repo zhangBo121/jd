@@ -98,14 +98,14 @@ function dataHandler(){
 }
 
 // 9 书写一个开启静态服务的任务
-function serverHandler(){
-    return gulp.src('./dist')  //找到要开启服务的根目录
-    .pipe(webserver({  //需要一些配置项
-        port:8080, //端口号
-        open:'./pages/index.html',  //输入ip后自动打开的页面
-        livereload:true, //自动刷新浏览器
-    }))
-}
+// function serverHandler(){
+//     return gulp.src('./dist')  //找到要开启服务的根目录
+//     .pipe(webserver({  //需要一些配置项
+//         port:8080, //端口号
+//         open:'./pages/index.html',  //输入ip后自动打开的页面
+//         livereload:true, //自动刷新浏览器
+//     }))
+// }
 
 // 10 书写一个任务，删除dist文件夹
 function delHandler(){
@@ -130,6 +130,6 @@ function watchHandler(){
 module.exports.default = gulp.series(
     delHandler,
     gulp.parallel(htmlHandler,jsHandler,cssHandler,sassHandler,imgHandler,fontHandler,libHandler,lessHandler,dataHandler),
-    serverHandler,
+    // serverHandler,
     watchHandler
 )
