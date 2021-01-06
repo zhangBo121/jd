@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>详情页</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/iconfont.css">
+    <!-- <link rel="stylesheet" href="../less/detail.css"> -->
     <link rel="stylesheet" href="../css/detail.css">
 </head>
 <body>
@@ -46,9 +47,9 @@
                                     <span class="iconfont icon-fangdajing"></span>
                                 </div>
                                 <div class="cart">
-                                    <b class="goodsNum">10</b>
+                                    <!-- <b class="goodsNum">10</b> -->
                                     <i class="iconfont icon-gouwuche"></i>
-                                    <span>我的购物车</span>
+                                    <span class="myBuyCart">我的购物车</span>
                                 </div>
                             </div>
                             <ul class="sever_nav">
@@ -79,28 +80,35 @@
         </div>
 
         <!-- 网站主体 -->
-        <div class="main">
+        <div class="main_app">
+        <!-- <div class="main">
             <div class="main_head">
                 <p class="container">店铺名称</p>
             </div>
             <div class="productCheck container">
                 <div class="productCheck_left">
-                    <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                    <div class="mask"></div>
+                    <div class="minImgTop">
+                        <img xx='1' src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                        <div class="mask"></div>
+                    </div>
                     <div class="maxImgbox">
-                        <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                        <img xx='10' src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
                     </div>
                     <ul class="minImg">
-                        <li><p> &lt; </p></li>
+                        <li><p class="prev"> &lt; </p></li>
                         <div class="minImgbox">
-                        <li class="minImgbox_show"><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
-                        <li><img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
+                            <div class="minImgbox_gather">
+                                <li class="minImgbox_show"><img xx='9' src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt=""></li>
+                                <li><img xx='2' src="../images/new01.jpg" alt=""></li>
+                                <li><img xx='3' src="../images/new02.jpg" alt=""></li>
+                                <li><img xx='4' src="../images/new03.jpg" alt=""></li>
+                                <li><img xx='5' src="../images/new04.jpg" alt=""></li>
+                                <li><img xx='6' src="../images/new05.jpg" alt=""></li>
+                                <li><img xx='7' src="../images/new06.jpg" alt=""></li>
+                                <li><img xx='8' src="../images/new07.jpg" alt=""></li>
+                            </div>
                         </div>
-                        <li><p> &gt; </p></li>
+                        <li><p class="next"> &gt; </p></li>
                     </ul>
                 </div>
                 <div class="productCheck_right">
@@ -148,50 +156,78 @@
                     </div>
                     <div class="productNum">
                         <div class="productNum_left">
-                            <input type="text" class="PNum">
-                            <p><span>+</span><b>-</b></p>
+                            <span class="PNum01">1</span>
+                            <input type="text" class="PNum" value="1">
+                            <p><span class="add">+</span><b class="cut">-</b></p>
                         </div>
                         <div class="productNum_right">
-                            <span>加入购物车</span>
+                            <span class="buyCart">加入购物车</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- 详情 -->
+            详情
             <div class="productDetail">
-                <ul class="productDetail_head">
-                    <li>
-                        <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                        <p><span>￥</span><b>9999</b></p>
-                    </li>
-                </ul>
+                <div class="productDetail_top">
+                    <div class="productDetail_top_title">
+                        <h3>店长推荐</h3>
+                    </div>
+                    <ul class="productDetail_head">
+                        <li>
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                            <p><span>￥</span><b>9999</b></p>
+                        </li>
+                        <li>
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                            <p><span>￥</span><b>9999</b></p>
+                        </li>
+                        <li>
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                            <p><span>￥</span><b>9999</b></p>
+                        </li>
+                        <li>
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                            <p><span>￥</span><b>9999</b></p>
+                        </li>
+                        <li>
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                            <p><span>￥</span><b>9999</b></p>
+                        </li>
+                        <li>
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                            <p><span>￥</span><b>9999</b></p>
+                        </li>
+                    </ul>
+                </div>
                 <div class="productDetail_main container">
                     <div class="productDetail_main_title">
-                        <h3>商品介绍</h3>
+                        <h3 class="active">商品介绍</h3>
                         <h3>规格与包装</h3>
                         <h3>售后保障</h3>
-                        <h3>商品评价</h3>
+                        <h3>商品评价(2000+)</h3>
                         <h3>本店好评</h3>
                     </div>
-                    <ul>
-                        <li>
-                            <h3>详情1</h3>
+                    <ul class="productDetail_content">
+                        <li class="show">1
                             <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                            <h3>详情1</h3>
-                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                            <h3>详情1</h3>
-                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
-                            <h3>详情1</h3>
                             <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
                         </li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
+                        <li>2
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                        </li>
+                        <li>3
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                        </li>
+                        <li>4
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                        </li>
+                        <li>5
+                            <img src="https://img13.360buyimg.com/n2/jfs/t1/128301/29/18987/80758/5fb3302cE88117b3e/3a4507c5ebc4f707.jpg" alt="">
+                        </li>
                     </ul>
                 </div>
             </div>
+        </div> -->
         </div>
 
         <!-- 网站底部 -->
@@ -322,7 +358,6 @@
             </div>
         </div>
     </div>
-    <div id="aa"></div>
 </body>
 <script src="../js/public.js"></script>
 <script src="../js/detail.js"></script>

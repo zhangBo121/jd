@@ -8,6 +8,12 @@ back.onclick = function(){
     location.href = './goodslist.html'
 }
 
+// 点击logo返回主页
+var backIndex = document.querySelector('.backIndex')
+backIndex.onclick = function(){
+    location.href = './index.html'
+}
+
 // ajax请求数据进行匹配
 ajax({
     url:'../data/goodslist.json',

@@ -953,7 +953,6 @@ div.app {
       div.channelSquare {
         height: 895px;
         width: 990px;
-        background: pink;
 
         h3{
           font-size: 30px;
@@ -964,27 +963,43 @@ div.app {
         }
         div.channelSquare_img{
           height: 845px;
-          display: grid;
-          grid-gap: 8px;
+          width: 990px;
+          // display: grid;
+          // grid-gap: 8px;
   
           // 不会报错
           // grid-template-columns: 1fr 1fr 1fr 1fr;
           // grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
           
+          // display: grid;
+          // grid-template:
+          // 'a1 a2 a3' 1fr  
+          // 'a4 a5 a6' 1fr
+          // 'a7 a8 a9' 1fr
+          // /1fr 1fr 1fr
+          // ;
+
           // 会报错
-          grid-template:
-          "a1 a2 a3 a4" 1fr
-          "a1 a2 a7 a8" 1fr
-          "a9 a10 a11 a12" 1fr
-          "a13 a14 a15 a16" 1fr
-          "a17 a18 a19 a20" 1fr
-          / 1fr 1fr 1fr 1fr
-          ;
-
+          // grid-template:
+          // "a1 a2 a3 a4" 1fr
+          // "a1 a2 a7 a8" 1fr
+          // "a9 a10 a11 a12" 1fr
+          // "a13 a14 a15 a16" 1fr
+          // "a17 a18 a19 a20" 1fr
+          // / 1fr 1fr 1fr 1fr
+          // ;
+          img:nth-child(1){
+            grid-area: a1;
+            width: 100%;
+            height: 96%;
+          }
+          img:nth-child(2){
+            grid-area: a2;
+            width: 100%;
+            height: 96%;
+          }
         }
-        // img{
 
-        // }
       }
     }
 

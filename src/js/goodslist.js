@@ -1,9 +1,18 @@
+// 点击我的购物车去购物车页面
+var myBuyCart = document.querySelector('.myBuyCart')
+myBuyCart.onclick = function(){
+    location.href = './cart.html'
+}
+
+
+
 ajax({
     url:'../data/goodslist.json',
     type:'get',
     dataType:'json',
     data:'',
     success:function(json){
+        console.log(json);
         pageLoad(json)
     },
     error:function(err){
@@ -27,7 +36,7 @@ function pageLoad(json){
         <p><b>${item['总评价数']}</b><span>条评价</span></p>
         <p><a href="#">${item['店铺名称']}</a></p>
         <p>${item['店铺类型']}</p>
-        <p><em><a href='./detail.html'>查看详情</a></em><span><i class="iconfont icon-gouwuche"></i><b class='addGoods'>加入购物车</b></span></p>
+        <p><em><a href='./detail.html?id=${item['ID']}'>查看详情</a></em><span><i class="iconfont icon-gouwuche"></i><b class='addGoods'>加入购物车</b></span></p>
         `
         list.appendChild(li)
 

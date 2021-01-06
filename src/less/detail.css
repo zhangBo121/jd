@@ -178,7 +178,7 @@ div.app div.header div.head_main div.head_main_m.container div.head_right_sever 
 }
 div.app div.main div.main_head {
   height: 110px;
-  background: #f9f9f9;
+  background: #ebeaea;
   margin-bottom: 20px;
   border-bottom: 1px solid #999999;
 }
@@ -190,33 +190,44 @@ div.app div.main div.main_head p.container {
 }
 div.app div.main div.productCheck.container {
   height: 550px;
-  background: lightpink;
+  background: #ffffff;
   display: flex;
 }
 div.app div.main div.productCheck.container div.productCheck_left {
   padding: 10px;
   position: relative;
 }
-div.app div.main div.productCheck.container div.productCheck_left > img {
+div.app div.main div.productCheck.container div.productCheck_left div.minImgTop {
+  position: relative;
+}
+div.app div.main div.productCheck.container div.productCheck_left div.minImgTop img {
   width: 350px;
   height: 350px;
 }
-div.app div.main div.productCheck.container div.productCheck_left div.mask {
+div.app div.main div.productCheck.container div.productCheck_left div.minImgTop div.mask {
   width: 175px;
   height: 175px;
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 0px;
+  top: 0px;
   background: rgba(218, 147, 17, 0.6);
   cursor: move;
+  display: none;
 }
 div.app div.main div.productCheck.container div.productCheck_left div.maxImgbox {
-  width: 540px;
-  height: 540px;
-  border: 1px solid #000000;
+  width: 400px;
+  height: 400px;
   position: absolute;
   left: 360px;
   top: 10px;
+  display: none;
+  overflow: hidden;
+  z-index: 10;
+}
+div.app div.main div.productCheck.container div.productCheck_left div.maxImgbox img {
+  position: absolute;
+  width: 800px;
+  height: 800px;
 }
 div.app div.main div.productCheck.container div.productCheck_left ul.minImg {
   width: 350px;
@@ -227,17 +238,27 @@ div.app div.main div.productCheck.container div.productCheck_left ul.minImg {
 div.app div.main div.productCheck.container div.productCheck_left ul.minImg div.minImgbox {
   width: 290px;
   display: flex;
+  position: relative;
+  z-index: 10;
   overflow: hidden;
 }
-div.app div.main div.productCheck.container div.productCheck_left ul.minImg div.minImgbox li {
-  margin: 0 4px;
+div.app div.main div.productCheck.container div.productCheck_left ul.minImg div.minImgbox div.minImgbox_gather {
+  width: 800px;
+  position: relative;
+  display: flex;
 }
-div.app div.main div.productCheck.container div.productCheck_left ul.minImg div.minImgbox li img {
+div.app div.main div.productCheck.container div.productCheck_left ul.minImg div.minImgbox div.minImgbox_gather li {
+  margin-right: 4px;
+}
+div.app div.main div.productCheck.container div.productCheck_left ul.minImg div.minImgbox div.minImgbox_gather li img {
   height: 54px;
   width: 54px;
 }
-div.app div.main div.productCheck.container div.productCheck_left ul.minImg div.minImgbox li.minImgbox_show {
+div.app div.main div.productCheck.container div.productCheck_left ul.minImg div.minImgbox div.minImgbox_gather li.minImgbox_show {
   border: 1px solid #f10215;
+}
+div.app div.main div.productCheck.container div.productCheck_left ul.minImg li {
+  z-index: 20;
 }
 div.app div.main div.productCheck.container div.productCheck_left ul.minImg li p {
   font-size: 20px;
@@ -283,8 +304,10 @@ div.app div.main div.productCheck.container div.productCheck_right div.productPr
   color: #f10215;
 }
 div.app div.main div.productCheck.container div.productCheck_right div.productPrice div.productPrice_center p i {
+  margin-left: 10px;
   font-size: 12px;
   color: #005aa0;
+  cursor: pointer;
 }
 div.app div.main div.productCheck.container div.productCheck_right div.productPrice div.productPrice_center p:last-child {
   font-size: 14px;
@@ -301,15 +324,18 @@ div.app div.main div.productCheck.container div.productCheck_right div.productPr
   background: #3f3f3f;
   color: #fff38e;
   margin: 0 4px;
-  padding: 0 2px;
+  padding: 0 4px;
+  border-radius: 2px;
 }
 div.app div.main div.productCheck.container div.productCheck_right div.productPrice div.productPrice_center p:last-child em {
+  margin: 0 10px;
   font-size: 12px;
   color: #666666;
 }
 div.app div.main div.productCheck.container div.productCheck_right div.productPrice div.productPrice_center p:last-child strong {
   font-size: 12px;
   color: #005aa0;
+  cursor: pointer;
 }
 div.app div.main div.productCheck.container div.productCheck_right div.productPrice div.productPrice_right {
   width: 60px;
@@ -403,11 +429,19 @@ div.app div.main div.productCheck.container div.productCheck_right div.productNu
   float: left;
   border: #999999 1px solid;
 }
+div.app div.main div.productCheck.container div.productCheck_right div.productNum div.productNum_left > span.PNum01 {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+}
 div.app div.main div.productCheck.container div.productCheck_right div.productNum div.productNum_left input.PNum {
   width: 46px;
   height: 46px;
   text-align: center;
   border: none;
+  display: block;
 }
 div.app div.main div.productCheck.container div.productCheck_right div.productNum div.productNum_left p {
   height: 48px;
@@ -426,12 +460,14 @@ div.app div.main div.productCheck.container div.productCheck_right div.productNu
   line-height: 16px;
   padding: 2px 2px 0 0;
   border-bottom: 1px solid #999999;
+  cursor: pointer;
 }
 div.app div.main div.productCheck.container div.productCheck_right div.productNum div.productNum_left p b {
   width: 16px;
   text-align: center;
   padding-left: 4px;
   font-weight: 600;
+  cursor: pointer;
 }
 div.app div.main div.productCheck.container div.productCheck_right div.productNum div.productNum_right {
   float: left;
@@ -445,8 +481,65 @@ div.app div.main div.productCheck.container div.productCheck_right div.productNu
   line-height: 48px;
   cursor: pointer;
 }
+div.app div.main div.productDetail div.productDetail_top {
+  width: 1210px;
+  height: 250px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+div.app div.main div.productDetail div.productDetail_top div.productDetail_top_title {
+  height: 40px;
+  border-bottom: #e4393c 1px solid;
+  background: #e1dcdc;
+  margin: 20px 0;
+}
+div.app div.main div.productDetail div.productDetail_top div.productDetail_top_title h3 {
+  width: 110px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #f9f9f9;
+  background: #e4393c;
+}
+div.app div.main div.productDetail div.productDetail_top ul.productDetail_head {
+  display: flex;
+  justify-content: space-around;
+}
+div.app div.main div.productDetail div.productDetail_top ul.productDetail_head li img {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 10px;
+}
+div.app div.main div.productDetail div.productDetail_top ul.productDetail_head li p {
+  font-size: 14px;
+  color: #df3033;
+  text-align: center;
+  font-weight: 700;
+}
 div.app div.main div.productDetail div.productDetail_main.container div.productDetail_main_title {
   display: flex;
+  border-bottom: 1px solid #e1251b;
+  background: #e1dcdc;
+}
+div.app div.main div.productDetail div.productDetail_main.container div.productDetail_main_title h3 {
+  padding: 10px 30px;
+  color: #666666;
+  text-align: center;
+  cursor: pointer;
+}
+div.app div.main div.productDetail div.productDetail_main.container div.productDetail_main_title h3.active {
+  background: #e1251b;
+  color: #e3e4e5;
+}
+div.app div.main div.productDetail div.productDetail_main.container ul.productDetail_content li {
+  display: none;
+}
+div.app div.main div.productDetail div.productDetail_main.container ul.productDetail_content li img {
+  width: 990px;
+  height: 990px;
+}
+div.app div.main div.productDetail div.productDetail_main.container ul.productDetail_content li.show {
+  display: block;
 }
 div.app div.footer div.foot_top.container {
   height: 104px;

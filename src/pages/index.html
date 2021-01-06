@@ -7,8 +7,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/iconfont.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <!-- <link rel="stylesheet" href="../css/index.css"> -->
+    <link rel="stylesheet" href="../less/index.css">
 </head>
+<style>
+    .channelSquare_img{
+        display: grid;
+        grid-gap: 8px;
+        grid-template:
+        "a1 a2 a3 a4" 1fr
+        "a1 a2 a7 a8" 1fr
+        "a9 a10 a11 a12" 1fr
+        "a13 a14 a15 a16" 1fr
+        "a17 a18 a19 a20" 1fr
+        / 1fr 1fr 1fr 1fr
+        ;
+    }
+</style>
 <body>
     <div class="app">
         <!-- 网站头部 -->
@@ -20,7 +35,7 @@
                         <b>江西</b>
                     </div>
                     <ul class="head_top_t_right">
-                        <li class="login"><i><a href="#">你好，请登录</a></i><b><a href="#">免..</a></b></li>
+                        <li class="login"><i><a href="./login.html">你好，请登录</a></i><b><a href="./register.html">免..</a></b></li>
                         <li class="myOrder"><a href="#">我的订单</a></li>
                         <li class="myjd"><a href="#">我的京东<i class="iconfont icon-xia"></i></a></li>
                         <li class="member"><a href="#">京东会员</a></li>
@@ -46,9 +61,9 @@
                                     <span class="iconfont icon-fangdajing"></span>
                                 </div>
                                 <div class="cart">
-                                    <b class="goodsNum">10</b>
+                                    <!-- <b class="goodsNum">10</b> -->
                                     <i class="iconfont icon-gouwuche"></i>
-                                    <span>我的购物车</span>
+                                    <span class="myBuyCart">我的购物车</span>
                                 </div>
                             </div>
                             <ul class="sever_nav">
@@ -358,7 +373,7 @@
                 <div class="channelSquare">
                     <h3>频道广场</h3>
                     <div class="channelSquare_img">
-                        <!-- <img src="../images/new01.jpg" alt="">
+                        <img src="../images/new01.jpg" alt="">
                         <img src="../images/new02.jpg" alt="">
                         <img src="../images/new03.jpg" alt="">
                         <img src="../images/new04.jpg" alt="">
@@ -375,7 +390,7 @@
                         <img src="../images/new15.jpg" alt="">
                         <img src="../images/new16.jpg" alt="">
                         <img src="../images/new17.jpg" alt="">
-                        <img src="../images/new18.jpg" alt=""> -->
+                        <img src="../images/new18.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -538,7 +553,7 @@
     <div id="aa"></div>
 </body>
 <!-- <script src="../js/jquery-1.8.3.min.js"></script> -->
-<script src="../js/jquery-1.8.3.js"></script>
+<script src="../lib/jquery-1.8.3.js"></script>
 <!-- <script src="../js/lazyload.min.js"></script> -->
 <!-- <script src="../js/lazyload.js"></script> -->
 
@@ -547,12 +562,15 @@
 <script src="../js/public.js"></script>
 <script src="../js/index.js"></script>
 <script>
+    console.log('======================');
+    console.log($);
+    console.log(jQuery);
     console.log($('.footer'));
     console.log(jQuery('.footer'));
     console.log($('aa'));
     console.log(jQuery('aa'));
     console.log(document.querySelector('#aa'));
-
+    console.log('=======================');
 
 </script>
 

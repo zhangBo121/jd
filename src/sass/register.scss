@@ -80,7 +80,7 @@ div.wrap {
       div.main_center {
           margin-top: 40px;
         div.verifyPhone {
-            display: none;
+            display: block;
           p {
               width: 400px;
               height: 50px;
@@ -173,12 +173,13 @@ div.wrap {
               width: 400px;
               color: aliceblue;
               font-weight: 600;
+              cursor: pointer;
               background: rgb(238,34,34);
           }
         }
   
         div.registeredSuccessfully{
-            // display: none;
+            display: none;
           p {
             width: 400px;
             height: 50px;

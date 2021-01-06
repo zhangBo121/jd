@@ -1,9 +1,10 @@
 
 
-
-
-
-
+// 点击我的购物车去到我的购物车页面
+var myBuyCart = document.querySelector('.myBuyCart')
+myBuyCart.onclick = function(){
+    location.href = './cart.html'
+}
 
 
 
