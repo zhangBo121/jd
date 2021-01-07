@@ -73,9 +73,9 @@ console.log(register001);
 // login001.onclick = function(){
 //     location.href = './login.html'
 // }
-register001.onclick = function(){
-    location.href = './register.html'
-}
+// register001.onclick = function(){
+//     location.href = './register.html'
+// }
 
 
 // 点击我的购物车去到我的购物车页面
@@ -247,7 +247,7 @@ ajax({
     url:'../data/guesslikegoods.json',
     type:'get',
     data:'',
-    cache:true,
+    cache:false,
     dataType:'json',
     success:function(data){
         // console.log(data);

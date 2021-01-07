@@ -464,8 +464,8 @@ function changedData(){
                         alert('超出购买上限');
                     }else{
                         item.num += spanVal06
-                        PNum01.innerHTML = item.num
-                        console.log('加入购物车成功');
+                        // PNum01.innerHTML = item.num
+                        alert('加入购物车成功');
                     }
                 }
             })
