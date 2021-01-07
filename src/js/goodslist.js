@@ -51,7 +51,6 @@ function pageLoad(json){
             console.log(index);
             var id = index+1
 
-
             // 点击后，先判断本地储存中是否有数据
             if(localStorage.getItem('goods')){
                 var goodsArr = JSON.parse(localStorage.getItem('goods'))
@@ -121,7 +120,7 @@ function pageLoad(json){
     window.onscroll = function() {
         loadImg()
     }
-
-
-
 }
+
+
+// https://zhangbo121.github.io/src/pages/index.html

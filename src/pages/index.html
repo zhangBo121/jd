@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>首页</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/iconfont.css">
-    <!-- <link rel="stylesheet" href="../css/index.css"> -->
-    <link rel="stylesheet" href="../less/index.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- <link rel="stylesheet" href="../less/index.css"> -->
 </head>
 <style>
     .channelSquare_img{
@@ -551,6 +551,7 @@
         </div>
     </div>
     <div id="aa"></div>
+    <div class="bb"></div>
 </body>
 <!-- <script src="../js/jquery-1.8.3.min.js"></script> -->
 <script src="../lib/jquery-1.8.3.js"></script>
@@ -562,15 +563,16 @@
 <script src="../js/public.js"></script>
 <script src="../js/index.js"></script>
 <script>
-    console.log('======================');
+    console.log('========== $ ============');
     console.log($);
-    console.log(jQuery);
-    console.log($('.footer'));
-    console.log(jQuery('.footer'));
+    console.log($('.bb'));
     console.log($('aa'));
+    console.log('========== jQuery ===========');
+    console.log(jQuery);
+    console.log(jQuery('.bb'));
     console.log(jQuery('aa'));
+    console.log('========== 直接获取dom节点 =============');
     console.log(document.querySelector('#aa'));
-    console.log('=======================');
 
 </script>
 
