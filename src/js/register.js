@@ -12,6 +12,10 @@ window.onload = function(){
     var verify02 = document.querySelector('.verify02')  //第二根横线
     var registeredSuccessfully = document.querySelector('.registeredSuccessfully')  //注册成页面
     var otherRegister = document.querySelector('.otherRegister')  //底下的其他注册
+    var backlogin = document.querySelector('.backlogin')
+    backlogin.onclick = function(){
+        location.href = './login.html'
+    }
     // 进入页面后加载验证码
     randomCode.innerHTML = getVerificationCode(6)
 
@@ -37,7 +41,7 @@ window.onload = function(){
             console.log('手机号验证成功');
         }else{
             flag = false
-            console.log('手机号输入错误');
+            alert('手机号输入错误');
         }
 
         // 验证码输入
@@ -91,7 +95,7 @@ window.onload = function(){
             console.log('用户名可用');
         }else{
             flag03 = false
-            console.log('用户名错误');
+            alert('用户名错误');
         }
 
         // 密码01验证
@@ -100,7 +104,7 @@ window.onload = function(){
             console.log('密码可用');
         }else{
             flag04 = false
-            console.log('密码不可用');
+            alert('密码不可用');
         }
 
         // 再次验证密码02
@@ -109,11 +113,10 @@ window.onload = function(){
             console.log('再次密码验证通过');
         }else{
             flag05 = false
-            console.log('与上次密码不符');
+            alert('与上次密码不符');
         }
 
         if(flag03 && flag04 && flag05){
-        // if(true){
             // 将用户名和密码存入本地存储
 
             // 判断本地是否有数据
@@ -138,8 +141,6 @@ window.onload = function(){
             }
 
             if(!hasuser){
-                console.log(username01val);
-                console.log(password01val);
                 arr.push({username01:username01val,password01:password01val,haslogin:0})
             }
             // 将用户注册的数据添加到本地

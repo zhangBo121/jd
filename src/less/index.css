@@ -39,6 +39,9 @@ div.app div.header div.head_top div.head_top_t.container ul.head_top_t_right li 
   font-size: 12px;
   margin-left: 4px;
 }
+div.app div.header div.head_top div.head_top_t.container ul.head_top_t_right li.login {
+  position: relative;
+}
 div.app div.header div.head_top div.head_top_t.container ul.head_top_t_right li.login i a {
   border: none;
 }
@@ -286,6 +289,9 @@ div.app div.main div.main-top div.brandOptimization div.brandOptimization_top di
 }
 div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_top div.index_login_top_r p {
   margin-bottom: 2px;
+}
+div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_top div.index_login_top_r div span {
+  cursor: pointer;
 }
 div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_bottom {
   margin: 10px 0;
@@ -1174,7 +1180,60 @@ div.app div.footer div.foot_bot.container ul.netPolice li:nth-child(5) {
 div.app div.footer div.foot_bot.container ul.netPolice li:last-child {
   background: url(http://misc.360buyimg.com/mtd/pc/index_2019/1.0.0/assets/img/23f3ddf914b1b527d0429a3d713cfe3a.png) -206px -148px;
 }
+ul.back_top {
+  width: 60px;
+  height: 420px;
+  position: fixed;
+  right: 50px;
+  top: 200px;
+  display: none;
+  background: #ffffff;
+}
+ul.back_top li {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  text-align: center;
+  line-height: 20px;
+  border-bottom: 1px solid #cccccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+ul.back_top li i {
+  font-size: 18px;
+}
+ul.back_top li.light {
+  background: #c77c1b;
+}
+.newlogin {
+  width: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  color: #e1251b;
+  cursor: pointer;
+}
 .container {
   width: 990px;
   margin: 0 auto;
+}
+div.quitLogin {
+  font-size: 40px;
+  border: 1px solid #ccc;
+  background: #a15f5c;
+  position: absolute;
+  top: 200px;
+  left: 520px;
+  width: 400px;
+  height: 100px;
+  line-height: 100px;
+  font-weight: 700;
+  z-index: 20;
+  text-align: center;
+  color: #21c02e;
+  cursor: pointer;
+  display: none;
 }

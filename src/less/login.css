@@ -77,7 +77,6 @@ div.wrap div.main div.box div.box1 div.min_tit h3 {
 }
 div.wrap div.main div.box div.box1 div.min_tit h3.active {
   color: #e93854;
-  background: lightblue;
 }
 div.wrap div.main div.box div.box1 div.min_tit h3:hover {
   color: #e93854;

@@ -105,14 +105,16 @@ login.onclick = function(){
         // console.log(data);
         data.forEach((item)=>{
             if(item.username01=== userVal && item.password01 === passVla){
-                alert('登录成功')
-
-                // console.log('登录成功');
+                // alert('登录成功')
+                location.href = './backIndex.html'
+                item.haslogin = 1
+                localStorage.setItem('user_pass',JSON.stringify(data))
                 return
             }else{
-                console.log('用户名或密码错误');
+                alert('用户名或密码错误');
             }
         })
         
     }
 }
+

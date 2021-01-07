@@ -11,6 +11,9 @@
     <!-- <link rel="stylesheet" href="../less/index.css"> -->
 </head>
 <style>
+    a{
+        color: rgb(51,51,51);
+    }
     .channelSquare_img{
         display: grid;
         grid-gap: 8px;
@@ -35,7 +38,8 @@
                         <b>江西</b>
                     </div>
                     <ul class="head_top_t_right">
-                        <li class="login"><i><a href="./login.html">你好，请登录</a></i><b><a href="./register.html">免..</a></b></li>
+                        <div class="quitLogin">点击退出登录</div>
+                        <li class="login"><strong><i><a href="./login.html">你好，请登录</a></i><b><a href="./register.html">免..</a></b></strong></li>
                         <li class="myOrder"><a href="#">我的订单</a></li>
                         <li class="myjd"><a href="#">我的京东<i class="iconfont icon-xia"></i></a></li>
                         <li class="member"><a href="#">京东会员</a></li>
@@ -163,7 +167,7 @@
                                     <img src="../images/headimg.jpg" alt="">
                                     <div class="index_login_top_r">
                                         <p>Hi~欢迎逛京东</p>
-                                        <div><span>登录</span> | <span>注册</span></div>
+                                        <div><span class="login001">登录</span> | <span class="register001">注册</span></div>
                                     </div>
                                 </div>
                                 <div class="index_login_bottom">
@@ -201,8 +205,8 @@
                     <div class="seckill">
                         <div class="seckill_left">
                             <p>京东秒杀</p>
-                            <div><span>18:00</span>点场 倒计时</div>
-                            <div class="countDown"><span>01</span>: <span>01</span>: <span>11</span></div>
+                            <div class="jdCDClock"><span>24:00</span>点场 倒计时</div>
+                            <div class="countDown"><span id="t_h">01</span>: <span id="t_m">01</span>: <span id="t_s">11</span></div>
                         </div>
                         <div class="seckill_center">
                             <ul>
@@ -550,69 +554,16 @@
             </div>
         </div>
     </div>
-    <div id="aa"></div>
-    <div class="bb"></div>
+    <ul class="back_top">
+        <li>京东秒杀</li>
+        <li>特色优选</li>
+        <li>频道广场</li>
+        <li>为你推荐</li>
+        <li><i class="iconfont icon-jingdong"></i><b>客服</b></li>
+        <li><i class="iconfont icon-qianbi"></i><b>反馈</b></li>
+        <li><i class="iconfont icon-ziyuan"></i><b>顶部</b></li>
+    </ul>
 </body>
-<!-- <script src="../js/jquery-1.8.3.min.js"></script> -->
-<script src="../lib/jquery-1.8.3.js"></script>
-<!-- <script src="../js/lazyload.min.js"></script> -->
-<!-- <script src="../js/lazyload.js"></script> -->
-
-
-
 <script src="../js/public.js"></script>
 <script src="../js/index.js"></script>
-<script>
-    console.log('========== $ ============');
-    console.log($);
-    console.log($('.bb'));
-    console.log($('aa'));
-    console.log('========== jQuery ===========');
-    console.log(jQuery);
-    console.log(jQuery('.bb'));
-    console.log(jQuery('aa'));
-    console.log('========== 直接获取dom节点 =============');
-    console.log(document.querySelector('#aa'));
-
-</script>
-
-
-
-
-
-<script type='module'>
-    // import data from '../data/index.js';
-    //  console.log(data); 
-    //  // var list = 
-    //  var newData = []; 
-    //  data.map((item,index)=>{ var obj = {}; 
-    // for(var key in item){ 
-    // var newKey = 'znone';
-    // // console.log(key) 
-    // if(key === 'ID') newKey = 'id';
-    // if(key === '价格') newKey = 'price';
-    // if(key === '商品名称') { 
-    //     // newKey = 'title' 
-    //     if(item[key].indexOf('京品电脑') === 0){ 
-    //             obj['label'] = '京品电脑'; 
-    //             obj['title'] = item[key].split('京品电脑')[1].slice(2); 
-    //     }else{ 
-    //             newKey = 'title'; 
-    //     }    
-    // } 
-    // if(key === '图片地址') newKey = 'src'; 
-    // if(key === '店铺id') newKey = 'uid';
-    // if(key === '店铺名称') newKey = 'shopName'; 
-    // if(key === '店铺类型') newKey = 'type'; 
-    // if(key === '总评价数') newKey = 'num'; 
-    // obj[newKey] = item[key]; 
-    // } newData.push(obj); }) 
-    // console.log(newData); 
-    // var m = newData
-    // document.write(m)
-    // console.log(newData[0]['title'].indexOf('京品电脑')); 
-    // var oobj = {a:1};
-    // delete oobj.a; console.log(oobj);
-</script>
-
 </html>

@@ -258,6 +258,7 @@ mian.onclick = function(e){
         })
         all.checked = arr.every(item=>item)
 
+        total()
     }
 
 }

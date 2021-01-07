@@ -813,24 +813,24 @@ function on(parent, type, selector, callback) {
 }
 
 // 34.获取页面滚动的距离  滚动条
-// function getScroll() {
-//     if (window.pageYOffset) {
-//         return {
-//             left: window.pageXOffset,
-//             top: window.pageYOffset,
-//         }
-//     } else if (document.documentElement.scrollTop) {
-//         return {
-//             left: document.documentElement.scrollLeft,
-//             top: document.documentElement.scrollTop,
-//         }
-//     } else {
-//         return {
-//             left: document.body.scrollLeft,
-//             top: document.body.scrollTop,
-//         }
-//     }
-// }
+function getScroll01() {
+    if (window.pageYOffset) {
+        return {
+            left: window.pageXOffset,
+            top: window.pageYOffset,
+        }
+    } else if (document.documentElement.scrollTop) {
+        return {
+            left: document.documentElement.scrollLeft,
+            top: document.documentElement.scrollTop,
+        }
+    } else {
+        return {
+            left: document.body.scrollLeft,
+            top: document.body.scrollTop,
+        }
+    }
+}
 
 //34.1获取页面的滚动距离  获取页面滚动条滚走的距离
 function getScroll() {
@@ -1153,6 +1153,8 @@ function countDown(days) {
         var h = Math.floor(t / 1000 / 60 / 60 % 24); //时
         var m = Math.floor(t / 1000 / 60 % 60); //分
         var s = Math.floor(t / 1000 % 60); //秒
+
+        // return toDB(d) + "天" +  toDB(h) + "时" +  toDB(m) + "分" +  toDB(s) + "秒"
         document.getElementById("t_d").innerHTML = toDB(d) + "天";
         document.getElementById("t_h").innerHTML = toDB(h) + "时";
         document.getElementById("t_m").innerHTML = toDB(m) + "分";

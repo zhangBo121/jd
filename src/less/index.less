@@ -53,6 +53,7 @@ div.app {
           }
 
           li.login {
+            position: relative;
             i {
               a {
                 border: none;
@@ -368,11 +369,14 @@ div.app {
 
                 div.index_login_top_r {
                   color: rgb(102, 102, 102);
-
                   p {
                     margin-bottom: 2px;
                   }
-
+                  div{
+                    span{
+                      cursor: pointer;
+                    }
+                  }
                 }
               }
 
@@ -1450,9 +1454,62 @@ div.app {
     }
   }
 }
-
+ul.back_top{
+  width: 60px;
+  height: 420px;
+  position: fixed;
+  right: 50px;
+  top: 200px;
+  display: none;
+  background: rgb(255,255,255);
+  li{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+    line-height: 20px;
+    border-bottom: 1px solid #cccccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    i{
+      font-size: 18px;
+    }
+  }
+  li.light{
+    background: rgb(199, 124, 27);
+  }
+}
+.newlogin{
+  width: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  color: rgb(225, 37, 27);
+  cursor: pointer;
+}
 
 .container {
   width: 990px;
   margin: 0 auto;
+}
+
+div.quitLogin{
+  font-size: 40px;
+  border: 1px solid #ccc;
+  background: rgb(161, 95, 92);
+  position: absolute;
+  top: 200px;
+  left: 520px;
+  width: 400px;
+  height: 100px;
+  line-height: 100px;
+  font-weight: 700;
+  z-index: 20;
+  text-align: center;
+  color: rgb(33, 192, 46);
+  cursor: pointer;
+  display: none;
 }

@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/iconfont.css">
 <link rel="stylesheet" href="../css/goodslist.css">
+<style>
+    a{
+        color: rgb(51,51,51);
+    }
+</style>
 <body>
     <div class="app">
         <!-- 网站头部 -->
@@ -19,7 +24,7 @@
                         <b>江西</b>
                     </div>
                     <ul class="head_top_t_right">
-                        <li class="login"><i><a href="#">你好，请登录</a></i><b><a href="#">免..</a></b></li>
+                        <li class="login"><i><a href="./login.html">你好，请登录</a></i><b><a href="./register.html">免..</a></b></li>
                         <li class="myOrder"><a href="#">我的订单</a></li>
                         <li class="myjd"><a href="#">我的京东<i class="iconfont icon-xia"></i></a></li>
                         <li class="member"><a href="#">京东会员</a></li>
@@ -224,4 +229,35 @@
 </body>
 <script src="../js/public.js"></script>
 <script src="../js/goodslist.js"></script>
+<script>
+
+    console.log(99999);
+    window.onscroll = function(){
+        console.log(getScroll01().top);
+        console.log(getScroll().top);
+    }
+
+
+    
+    function getScroll01() {
+        console.log(10101);
+        if (window.pageYOffset) {
+            return {
+                left: window.pageXOffset,
+                top: window.pageYOffset,
+            }
+        } else if (document.documentElement.scrollTop) {
+            return {
+                left: document.documentElement.scrollLeft,
+                top: document.documentElement.scrollTop,
+            }
+        } else {
+            return {
+                left: document.body.scrollLeft,
+                top: document.body.scrollTop,
+            }
+        }
+    }
+
+</script>
 </html>

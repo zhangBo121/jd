@@ -1,15 +1,23 @@
+window.onload = function(){
 // 获取商品列表页传过来的id--地址栏
 var id = location.href.split('?')[1].split('=')[1]
 console.log(id);
 
+
+
+
+
+
+// 页面数据请求和渲染
 ajax({
     url:'../data/goodslist.json',
     type:'get',
     dataType:'json',
     cache:'false',
     success:function(json){
-        console.log(json);
+        // console.log(json);
         pagedata(json)
+        renderer()
     }
 })
 var main_app = document.querySelector('.main_app')
@@ -168,10 +176,23 @@ function pagedata(json){
             `
             main_app.appendChild(div)
             bigGlass()
+            changedData()
         }
     })
 }
+// 获取本地数据
+function renderer(){
+    let data = JSON.parse(localStorage.getItem('goods'))
+    console.log(data);
+    var PNum01 = document.querySelector('.PNum01')  //数量的盒子
+    console.log(PNum01);
+    data.forEach((item)=>{
 
+        if(item.id == id){
+            PNum01.innerHTML = item.num 
+        }
+    })
+}
 
 // 点击我的购物车
 var myBuyCart = document.querySelector('.myBuyCart')
@@ -328,21 +349,42 @@ function bigGlass(){
             prevIndexclick = this.index
         }
     }
+}
 
 
-    // 修改数量
+// 修改数量
+function changedData(){
     var productNum = document.querySelector('.productNum') //最大的盒子
     // 事件委托
     productNum.onclick = function(e){
         var target = e.target 
         var PNum01 = document.querySelector('.PNum01')  //span标签
-        var PNum = document.querySelector('.PNum')  //输入框数量
+        // var PNum = document.querySelector('.PNum')  //输入框数量
         var numVal = PNum01.innerHTML
         // 点击加号
         if(target.className === 'add'){
+            // 获取本地数据
+            let data = JSON.parse(localStorage.getItem('goods'))
+            console.log(data);
+            data.forEach((item)=>{
+                if(item.id == id){
+                    console.log(666);
+                    if(item.num>=10){
+                        item.num = 10
+                        console.log('超出购买数量');
+                    }else{
+                        item.num++
+                    }
+
+                }
+            })
+
+            // 修改后加入本地存储
+            localStorage.setItem('goods',JSON.stringify(data))
+
             numVal++
-            if(numVal>=20){
-                numVal=20  //商品加到最多
+            if(numVal>=10){
+                numVal=10  //商品加到最多
                 console.log('商品加到最多');
             }
             PNum01.innerHTML = numVal
@@ -350,6 +392,24 @@ function bigGlass(){
 
         // 点击减号
         if(target.className === 'cut'){
+            let data = JSON.parse(localStorage.getItem('goods'))
+            console.log(data);
+            data.forEach((item)=>{
+                if(item.id == id){
+                    console.log(666);
+                    if(item.num<=1){
+                        item.num = 1
+                        console.log('超出购买数量');
+                    }else{
+                        item.num--
+                    }
+
+                }
+            })
+
+            // 修改后加入本地存储
+            localStorage.setItem('goods',JSON.stringify(data))
+
             numVal--
             if(numVal<=1){
                 numVal=1
@@ -358,23 +418,35 @@ function bigGlass(){
             PNum01.innerHTML = numVal
         }
 
+        // 输入框修改数量
         if(target.className === 'PNum01'){
-            console.log(numVal);
             var input = document.createElement('input')  //创建输入框
             input.className = 'PNum'
             input.value = numVal
             target.parentElement.replaceChild(input,target)
             input.focus()
-
+            // 失去焦点
             input.onblur = function(){
                 var span = document.createElement('span') //创建span标签
                 span.className = 'PNum01'
-                if(this.value>=20){
-                    this.value = 20
+                if(this.value>=10){
+                    this.value = 10
                 }
                 if(this.value<=1){
                     this.value = 1
                 }
+                // 获取本地数据
+                let data = JSON.parse(localStorage.getItem('goods'))
+                data.forEach((item)=>{
+                    if(item.id == id){
+                        console.log(666);
+                        console.log(this);
+                        item.num = this.value
+                    }
+                })
+                // 修改后加入本地存储
+                localStorage.setItem('goods',JSON.stringify(data))
+                // 将加好的数据渲染到页面
                 span.innerHTML = this.value
                 input.parentNode.replaceChild(span,input)
             }
@@ -382,9 +454,24 @@ function bigGlass(){
 
         // 点击加入购物车
         if(target.className === 'buyCart'){
-            console.log(333);
-            // 要用到本地数据
-            console.log('加入购物车成功');
+            var spanVal06 = PNum01.innerHTML-0  //输入框里面的值
+            console.log(spanVal06);
+            let data = JSON.parse(localStorage.getItem('goods'))  //本地数据
+            data.forEach((item)=>{
+                if(item.id == id){
+                    console.log(666);
+                    if(item.num + spanVal06 > 10){
+                        alert('超出购买上限');
+                    }else{
+                        item.num += spanVal06
+                        PNum01.innerHTML = item.num
+                        console.log('加入购物车成功');
+                    }
+                }
+            })
+            // 修改后加入本地存储
+            localStorage.setItem('goods',JSON.stringify(data))
+
         }
     }
 
@@ -403,5 +490,6 @@ function bigGlass(){
             prevIndex = this.index
         }
     }
-
 }
+}
+

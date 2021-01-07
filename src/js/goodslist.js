@@ -47,8 +47,9 @@ function pageLoad(json){
     a.forEach((item,index)=>{
         // console.log(_json);
         // 给当前点击的加入购物车添加点击事件
+
         item.onclick = function(){
-            console.log(index);
+            // console.log(index);
             var id = index+1
 
             // 点击后，先判断本地储存中是否有数据
@@ -64,9 +65,12 @@ function pageLoad(json){
             // 判断当前选中的商品是否在购物车中
             if(goodsArr.length>0){
                 goodsArr.forEach((item)=>{
-                    
                     if(item.id===id){
                         item.num++
+                        if(item.num>10){
+                            item.num = 10
+                            alert('超出可购买数量')
+                        }
                         hasGoods = true
                         return false
                     }
@@ -121,6 +125,3 @@ function pageLoad(json){
         loadImg()
     }
 }
-
-
-// https://zhangbo121.github.io/src/pages/index.html
