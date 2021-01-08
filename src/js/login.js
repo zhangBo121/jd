@@ -89,16 +89,25 @@ login.onclick = function(){
     // 验证是否存在该用户名和密码
     // 获取本地存储中的账户数据
     if(flag&&flag1){
-        var data = JSON.parse(localStorage.getItem('user_pass'))
-        data.forEach((item)=>{
-            if(item.username01=== userVal && item.password01 === passVla){
-                location.href = './backIndex.html'
-                item.haslogin = 1
-                return
-            }else{
-                alert('用户名或密码错误');
-            }
-        })
+        if(localStorage.getItem('user_pass')){
+            var data = JSON.parse(localStorage.getItem('user_pass'))
+        }else{
+            var data = []
+        }
+        console.log(data);
+        if(data.length>0){
+            data.forEach((item)=>{
+                if(item.username01=== userVal && item.password01 === passVla){
+                    location.href = './backIndex.html'
+                    item.haslogin = 1
+                    return
+                }else{
+                    alert('用户名或密码错误');
+                }
+            })
+        }else{
+            alert('账户不存在')
+        }
         localStorage.setItem('user_pass',JSON.stringify(data))
     }else{
         alert('用户名或密码错误');
