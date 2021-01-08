@@ -1,28 +1,28 @@
 
 // 登录注册按钮
-var login = document.querySelector('.login').firstElementChild //顶部登录
-var indexLoginTopR = document.querySelector('.index_login_top_r')  //中间部分登录
-var localData = JSON.parse(localStorage.getItem('user_pass'))
-localData.forEach((item)=>{
-    if(item.haslogin === 1){
-        // 顶部登录
-        login.innerHTML = ''
-        var newspan = document.createElement('span')
-        newspan.className = 'newlogin'
-        newspan.innerHTML = `
-        用户${item.username01}
-        `
-        login.appendChild(newspan)
+// var login = document.querySelector('.login').firstElementChild //顶部登录
+// var indexLoginTopR = document.querySelector('.index_login_top_r')  //中间部分登录
+// var localData = JSON.parse(localStorage.getItem('user_pass'))
+// localData.forEach((item)=>{
+//     if(item.haslogin === 1){
+//         // 顶部登录
+//         login.innerHTML = ''
+//         var newspan = document.createElement('span')
+//         newspan.className = 'newlogin'
+//         newspan.innerHTML = `
+//         用户${item.username01}
+//         `
+//         login.appendChild(newspan)
 
 
-        // 中间部分
-        indexLoginTopR.innerHTML = ''
-        var newB = document.createElement('b')
-        newB.className = 'loginB'
-        newB.innerHTML = `欢迎用户${item.username01}`
-        indexLoginTopR.appendChild(newB)
-    }
-})
+//         // 中间部分
+//         indexLoginTopR.innerHTML = ''
+//         var newB = document.createElement('b')
+//         newB.className = 'loginB'
+//         newB.innerHTML = `欢迎用户${item.username01}`
+//         indexLoginTopR.appendChild(newB)
+//     }
+// })
 
 // // 点击退出登录
 // var newlogin = login.firstElementChild //用户名
