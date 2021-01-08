@@ -183,7 +183,7 @@ function pagedata(json){
 // 获取本地数据
 function renderer(){
     let data = JSON.parse(localStorage.getItem('goods'))
-    console.log(data);
+    // console.log(data);
     var PNum01 = document.querySelector('.PNum01')  //数量的盒子
     console.log(PNum01);
     data.forEach((item)=>{

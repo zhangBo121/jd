@@ -24,52 +24,52 @@ localData.forEach((item)=>{
     }
 })
 
-// 点击退出登录
-var newlogin = login.firstElementChild //用户名
-// var newB = document.querySelector('.newB')  //主体用户名
-var quitLogin = document.querySelector('.quitLogin')  //退出登录
-// 顶部
-login.onclick = function(){
-    quitLogin.style.display = 'block'
-}
-// 主体
-indexLoginTopR.onclick = function(){
-    quitLogin.style.display = 'block'
-}
+// // 点击退出登录
+// var newlogin = login.firstElementChild //用户名
+// // var newB = document.querySelector('.newB')  //主体用户名
+// var quitLogin = document.querySelector('.quitLogin')  //退出登录
+// // 顶部
+// login.onclick = function(){
+//     quitLogin.style.display = 'block'
+// }
+// // 主体
+// indexLoginTopR.onclick = function(){
+//     quitLogin.style.display = 'block'
+// }
 
-quitLogin.onclick = function(e){ //退出登录
-    e.stopPropagation?e.stopPropagation():e.cancelBubble=true
-    var newem = document.createElement('em')
-    newem.className = 'newem'
-    newem.innerHTML = `<i><a href="./login.html">你好，请登录</a></i><b><a href="./register.html">免..</a></b>`
-    login.appendChild(newem)
-    quitLogin.style.display = 'none'
-    newlogin.style.display = 'none'
+// quitLogin.onclick = function(e){ //退出登录
+//     e.stopPropagation?e.stopPropagation():e.cancelBubble=true
+//     var newem = document.createElement('em')
+//     newem.className = 'newem'
+//     newem.innerHTML = `<i><a href="./login.html">你好，请登录</a></i><b><a href="./register.html">免..</a></b>`
+//     login.appendChild(newem)
+//     quitLogin.style.display = 'none'
+//     newlogin.style.display = 'none'
 
-    // 主体
-    indexLoginTopR.innerHTML = ''
-    indexLoginTopR.innerHTML = `
-    <p>Hi~欢迎逛京东</p>
-    <div><span class="login001">登录</span> | <span class="register001">注册</span></div>
-    `
+//     // 主体
+//     indexLoginTopR.innerHTML = ''
+//     indexLoginTopR.innerHTML = `
+//     <p>Hi~欢迎逛京东</p>
+//     <div><span class="login001">登录</span> | <span class="register001">注册</span></div>
+//     `
 
-    // 退出登录后修改本地数据
-    let localData01 = JSON.parse(localStorage.getItem('user_pass'))
-    localData01.forEach((item)=>{
-        if(item.haslogin === 1){
-            item.haslogin = 0
-        }
-    })
-    localStorage.setItem('user_pass',JSON.stringify(localData01))
-}
+//     // 退出登录后修改本地数据
+//     let localData01 = JSON.parse(localStorage.getItem('user_pass'))
+//     localData01.forEach((item)=>{
+//         if(item.haslogin === 1){
+//             item.haslogin = 0
+//         }
+//     })
+//     localStorage.setItem('user_pass',JSON.stringify(localData01))
+// }
 
 
 // 主体部分的登录注册
-var login001 = document.querySelector('.login001')  //主体登录
-var register001 = document.querySelector('.register001')  //主体注册
-console.log(99000);
-console.log(login001);
-console.log(register001);
+// var login001 = document.querySelector('.login001')  //主体登录
+// var register001 = document.querySelector('.register001')  //主体注册
+// console.log(99000);
+// console.log(login001);
+// console.log(register001);
 // login001.onclick = function(){
 //     location.href = './login.html'
 // }
@@ -209,7 +209,7 @@ countdownClock()
 function countdownClock(){
     var jdCDClock = document.querySelector('.jdCDClock')  //时间结束后的内容
     var countDown = document.querySelector('.countDown')
-     countDownClock('2021/01/07 24:00:00')
+     countDownClock('2021/01/08 10:00:00')
     //  countDownClock('2021/01/07 14:44:30')
      function countDownClock(days) {
          var timer01
@@ -250,7 +250,6 @@ ajax({
     cache:false,
     dataType:'json',
     success:function(data){
-        // console.log(data);
         rendererPage(data)
     }
 })
@@ -263,7 +262,7 @@ function rendererPage(data){
         var div = document.createElement('div')
         div.className = 'main_list_gs'
         div.innerHTML = `
-        <img data-src="${item['图片地址']}" alt="">
+        <img src="${item['图片地址']}" alt="">
         <p>${item['商品名称']}</p>
         <span><i>￥</i>${item['价格']}</span>
         `
@@ -278,7 +277,7 @@ function rendererPage(data){
         arr.push(products[i].children[0])
     }
 
-    loadImg()
+    // loadImg()
     function loadImg() {
         // 页面滚动条所在高度
         var scrollT = document.body.scrollTop || document.documentElement.scrollTop
@@ -298,20 +297,19 @@ function rendererPage(data){
     // 监听滚动条事件
     var back_top = document.querySelector('.back_top')
     var liArr = back_top.children
-    var arr1 = [600,650,1200,1900]
+    var arr1 = [600,650,1000,2100]
     var backTopBut = liArr[liArr.length-1]
     var html = document.querySelector('html')
     var backIndex = 0
-    light()
+    light1()
     var arr = [0]
     var scrollTop = 0
     for (var i = 0; i < arr1.length; i++) {
         scrollTop += arr1[i] //记录每个内容的高度
         arr.push(scrollTop) //将得到的高度加入arr中
     }
-    console.log(arr);
     window.onscroll = function() {
-        loadImg()
+        // loadImg()
 
         if(getScroll().top>=400){
             back_top.style.display = 'block'
@@ -326,7 +324,7 @@ function rendererPage(data){
             }
         }
 
-        light()
+        light1()
     }
 
 
@@ -336,17 +334,14 @@ function rendererPage(data){
         })
     }
 
-        // 点击list菜单里面的li，页面缓动到相应楼层
+    // 点击list菜单里面的li，页面缓动到相应楼层
     for (var i = 0; i < liArr.length - 1; i++) {
         // 保存当前楼层的下标
         liArr[i].index = i
-
         // 给li添加点击事件
         liArr[i].onclick = function() {
             // this.index.className = 'light'
             // light()
-
-
             animate(html, { //缓动，封装了scroll属性
                 'scrollTop': arr[this.index] //内容的下标等于菜单的下标
             }, () => {
@@ -356,7 +351,7 @@ function rendererPage(data){
     }
 
     // 菜单高亮
-    function light() {
+    function light1() {
         for (var i = 0; i < liArr.length - 1; i++) {
             liArr[i].className = ''
         }
