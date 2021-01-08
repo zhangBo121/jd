@@ -288,7 +288,7 @@ div.app div.main div.main-top div.brandOptimization div.brandOptimization_top di
   color: #666666;
 }
 div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_top div.index_login_top_r p {
-  margin-bottom: 2px;
+  margin: 10px 0;
 }
 div.app div.main div.main-top div.brandOptimization div.brandOptimization_top div.brandOptimization_top_right div.right_top_login div.index_login_top div.index_login_top_r div span {
   cursor: pointer;

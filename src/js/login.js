@@ -63,9 +63,7 @@ function QR_login(){
 var login = document.querySelector('.login p:last-child span')
 var user = document.querySelector('.user')
 var pass = document.querySelector('.pass')
-// console.log(login);
-// console.log(user);
-// console.log(pass);
+
 login.onclick = function(){
     var userVal = user.value  //输入的用户名
     var passVla = pass.value  //输入的密码 
@@ -75,46 +73,36 @@ login.onclick = function(){
     var reg = /^(\+861|1)(3|5|7|8)\d{9}$/ //手机号验证
     var reg2 = /^.{6,12}$/  //密码验证
 
-    if(userVal===''){
-        // console.log('用户名不能为空');
-        flag = false
-    }else if(!reg.test(userVal)){
-        // console.log('用户名错误');
-        flag = false
-    }else{
-        // console.log('用户名输入正确');
+    if(reg.test(userVal)){
         flag = true
-    }
-    // 验证密码
-    if(passVla === ''){
-        // console.log('密码不能为空');
-        flag1 = false
-    }else if(!reg2.test(passVla)){
-        // console.log('密码输入错误');
-        flag1 = false
     }else{
-        // console.log('密码正确');
+        flag = false
+    }
+ 
+    // 验证密码
+    if(reg2.test(passVla)){
         flag1 = true
+    }else{
+        flag1 = false
     }
 
     // 验证是否存在该用户名和密码
     // 获取本地存储中的账户数据
-    
     if(flag&&flag1){
         var data = JSON.parse(localStorage.getItem('user_pass'))
-        // console.log(data);
         data.forEach((item)=>{
             if(item.username01=== userVal && item.password01 === passVla){
-                // alert('登录成功')
                 location.href = './backIndex.html'
                 item.haslogin = 1
-                localStorage.setItem('user_pass',JSON.stringify(data))
                 return
             }else{
                 alert('用户名或密码错误');
             }
         })
-        
+        localStorage.setItem('user_pass',JSON.stringify(data))
+    }else{
+        alert('用户名或密码错误');
     }
+
 }
 

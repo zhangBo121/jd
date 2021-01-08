@@ -1,81 +1,79 @@
 
 // 登录注册按钮
-// var login = document.querySelector('.login').firstElementChild //顶部登录
-// var indexLoginTopR = document.querySelector('.index_login_top_r')  //中间部分登录
-// var localData = JSON.parse(localStorage.getItem('user_pass'))
-// localData.forEach((item)=>{
-//     if(item.haslogin === 1){
-//         // 顶部登录
-//         login.innerHTML = ''
-//         var newspan = document.createElement('span')
-//         newspan.className = 'newlogin'
-//         newspan.innerHTML = `
-//         用户${item.username01}
-//         `
-//         login.appendChild(newspan)
+var login = document.querySelector('.login').firstElementChild //顶部登录
+var indexLoginTopR = document.querySelector('.index_login_top_r')  //中间部分登录
 
+// 判断本地是否存在数据
+if(localStorage.getItem('user_pass')){
+    var localData = JSON.parse(localStorage.getItem('user_pass'))
+}else{
+    var localData = []
+}
 
-//         // 中间部分
-//         indexLoginTopR.innerHTML = ''
-//         var newB = document.createElement('b')
-//         newB.className = 'loginB'
-//         newB.innerHTML = `欢迎用户${item.username01}`
-//         indexLoginTopR.appendChild(newB)
-//     }
-// })
+console.log(localData);
+if(localData.length>0){  //有数据则开始执行
+    
+    localData.forEach((item)=>{
+        if(item.haslogin === 1){
+            console.log(19090);
+            // 顶部登录
+            login.innerHTML = '<span></span>'
+            var newspan = document.createElement('span')
+            newspan.className = 'newlogin'
+            newspan.innerHTML = `用户${item.username01}`
+            login.appendChild(newspan)
+            // 中间部分
+            indexLoginTopR.innerHTML = `
+            <p></p>
+            `
+            var newB = document.createElement('b')
+            newB.className = 'loginB'
+            newB.innerHTML = `欢迎用户${item.username01}`
+            indexLoginTopR.appendChild(newB)
+        }
+    })
+}
 
 // // 点击退出登录
-// var newlogin = login.firstElementChild //用户名
-// // var newB = document.querySelector('.newB')  //主体用户名
-// var quitLogin = document.querySelector('.quitLogin')  //退出登录
-// // 顶部
-// login.onclick = function(){
-//     quitLogin.style.display = 'block'
-// }
-// // 主体
-// indexLoginTopR.onclick = function(){
-//     quitLogin.style.display = 'block'
-// }
+var newlogin = login.firstElementChild //用户名
+// var newB = document.querySelector('.newB')  //主体用户名
+var quitLogin = document.querySelector('.quitLogin')  //退出登录
+// 顶部
+login.onclick = function(){
+    quitLogin.style.display = 'block'
+}
+// 主体
+indexLoginTopR.onclick = function(){
+    quitLogin.style.display = 'block'
+}
 
-// quitLogin.onclick = function(e){ //退出登录
-//     e.stopPropagation?e.stopPropagation():e.cancelBubble=true
-//     var newem = document.createElement('em')
-//     newem.className = 'newem'
-//     newem.innerHTML = `<i><a href="./login.html">你好，请登录</a></i><b><a href="./register.html">免..</a></b>`
-//     login.appendChild(newem)
-//     quitLogin.style.display = 'none'
-//     newlogin.style.display = 'none'
+quitLogin.onclick = function(e){ //退出登录
+    var e = e || event
+    e.stopPropagation?e.stopPropagation():e.cancelBubble=true
+    // 顶部
+    login.innerHTML = ''
+    var newem = document.createElement('em')
+    newem.className = 'newem'
+    newem.innerHTML = `<i><a href="./login.html">你好，请登录</a></i><b><a href="./register.html">免..</a></b>`
+    login.appendChild(newem)
+    quitLogin.style.display = 'none'
 
-//     // 主体
-//     indexLoginTopR.innerHTML = ''
-//     indexLoginTopR.innerHTML = `
-//     <p>Hi~欢迎逛京东</p>
-//     <div><span class="login001">登录</span> | <span class="register001">注册</span></div>
-//     `
+    // 主体
+    indexLoginTopR.innerHTML = ``
+    indexLoginTopR.innerHTML = `
+    <p>Hi~欢迎逛京东</p>
+    `
 
-//     // 退出登录后修改本地数据
-//     let localData01 = JSON.parse(localStorage.getItem('user_pass'))
-//     localData01.forEach((item)=>{
-//         if(item.haslogin === 1){
-//             item.haslogin = 0
-//         }
-//     })
-//     localStorage.setItem('user_pass',JSON.stringify(localData01))
-// }
+    // 退出登录后修改本地数据
+    let localData01 = JSON.parse(localStorage.getItem('user_pass'))
+    localData01.forEach((item)=>{
+        if(item.haslogin === 1){
+            item.haslogin = 0
+        }
+    })
+    localStorage.setItem('user_pass',JSON.stringify(localData01))
+}
 
-
-// 主体部分的登录注册
-// var login001 = document.querySelector('.login001')  //主体登录
-// var register001 = document.querySelector('.register001')  //主体注册
-// console.log(99000);
-// console.log(login001);
-// console.log(register001);
-// login001.onclick = function(){
-//     location.href = './login.html'
-// }
-// register001.onclick = function(){
-//     location.href = './register.html'
-// }
 
 
 // 点击我的购物车去到我的购物车页面
@@ -209,7 +207,7 @@ countdownClock()
 function countdownClock(){
     var jdCDClock = document.querySelector('.jdCDClock')  //时间结束后的内容
     var countDown = document.querySelector('.countDown')
-     countDownClock('2021/01/08 10:00:00')
+     countDownClock('2021/01/09 10:00:00')
     //  countDownClock('2021/01/07 14:44:30')
      function countDownClock(days) {
          var timer01
@@ -294,10 +292,11 @@ function rendererPage(data){
             }
         }
     }
-    // 监听滚动条事件
+
+    // 监听滚动条事件楼层跳跃
     var back_top = document.querySelector('.back_top')
     var liArr = back_top.children
-    var arr1 = [600,650,1000,2100]
+    var arr1 = [700,800,1000,1900]
     var backTopBut = liArr[liArr.length-1]
     var html = document.querySelector('html')
     var backIndex = 0
